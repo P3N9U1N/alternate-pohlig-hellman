@@ -13,6 +13,17 @@ def s(base:int,mod:int,value:int):
     actual=pow(base,result,mod)   
     assert actual==value  
 
+def f(base:int,mod:int):
+    arr=[False]*mod
+    value=base
+    for exp in range(mod):
+        arr[value]=True
+        value=(value*base)%mod
+    for i in range(len(arr)):
+        if not arr[i]:
+            actual=improved_pohlig_hellman.improved_pohlig_hellman(base,mod,i)
+            assert actual is None      
+
 def test_CaseSimple():
     t(10,541)
     t(5,23)
@@ -40,5 +51,9 @@ def test_CaseDifficult():
     s(6,2420352901,4423435)
     s(6,2420352901,3)
     s(6,2420352901,1111111)
-
-
+    
+def test_CaseFail():
+    f(443,7591)
+    f(2357,7213)
+    f(907,6863)
+    
