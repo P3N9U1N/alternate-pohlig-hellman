@@ -1,15 +1,15 @@
-import improved_pohlig_hellman 
+import alternate_pohlig_hellman 
 import labmath
 def t(base:int,mod:int):
     for exp in range(1,mod):
         expected=pow(base,exp,mod)
-        result=improved_pohlig_hellman.improved_pohlig_hellman(base,mod,expected)
+        result=alternate_pohlig_hellman.alternate_pohlig_hellman(base,mod,expected)
         actual=pow(base,result,mod)        
         assert actual==expected    
-    assert improved_pohlig_hellman.improved_pohlig_hellman(base,mod,1) == mod -1
+    assert alternate_pohlig_hellman.alternate_pohlig_hellman(base,mod,1) == mod -1
 
 def s(base:int,mod:int,value:int):
-    result=improved_pohlig_hellman.improved_pohlig_hellman(base,mod,value)   
+    result=alternate_pohlig_hellman.alternate_pohlig_hellman(base,mod,value)   
     actual=pow(base,result,mod)   
     assert actual==value  
 
@@ -21,7 +21,7 @@ def f(base:int,mod:int):
         value=(value*base)%mod
     for i in range(len(arr)):
         if not arr[i]:
-            actual=improved_pohlig_hellman.improved_pohlig_hellman(base,mod,i)
+            actual=alternate_pohlig_hellman.alternate_pohlig_hellman(base,mod,i)
             assert actual is None      
 
 def test_CaseSimple():

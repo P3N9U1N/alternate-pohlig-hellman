@@ -5,7 +5,7 @@ This repository contains an alternate version of the Pohlig-Hellman algorithm. I
 ## The algorithm
 ```python
 import labmath
-def improved_pohlig_hellman(base:int,mod:int,value:int):
+def alternate_pohlig_hellman(base:int,mod:int,value:int):
  d=mod-1
  factors= list(labmath.primefac(d))
  steps=0
