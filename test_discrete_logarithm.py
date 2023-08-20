@@ -61,6 +61,18 @@ def test_case_difficult():
     test_single_case_with_generator(6,2420352901,4423435)
     test_single_case_with_generator(6,2420352901,3)
     test_single_case_with_generator(6,2420352901,1111111)
+    test_single_case_with_generator(6,2420352901,1111111)
+    test_single_case_with_generator(47,1000000000000000000117,191)
+    test_single_case_with_generator(47,1000000000000000000117,194225671)
+    test_single_case_with_generator(47,1000000000000000000117,19)
+    test_single_case_with_generator(47,1000000000000000000117,86794562214523)
+    test_single_case_with_generator(47,1000000000000000000117,32123)
+    test_single_case_with_generator(47,1000000000000000000117,4325345435555)
+    test_single_case_with_generator(47,1000000000000000000117,11111)
+    test_single_case_with_generator(47,1000000000000000000117,454353456)
+    test_single_case_with_generator(47,10000000000000000000000343,191)
+    
+
     
 def test_case_fail():
     test_all_values_without_solution(5,89)
